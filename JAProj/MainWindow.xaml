@@ -1,0 +1,24 @@
+﻿<Window x:Class="JAProj.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JAProj"
+        SizeChanged="WindowSizeChanged"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1000" Background="#FF2B2B2B">
+    <Grid>
+        <Label Name="NumOfThreadsLabel" Content="1" Margin="0,10,10,0" VerticalAlignment="Top" Height="30" HorizontalAlignment="Right" Width="40"/>
+        <Button Name="OpenFile" Click="Button_OpenFile" Content="Open File" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="90"/>
+        <Slider Name="Slider" Height="30" Margin="110,10,60,0" Maximum="64" Minimum="1" SmallChange="1" Value="1" ValueChanged="Slider_ValueChanged" TickFrequency="1" IsSnapToTickEnabled="True" VerticalAlignment="Top" SnapsToDevicePixels="True" BorderThickness="0,5,0,0"/>
+        
+        <Image Name="InputImage" Margin="10,50,505,90"/>
+        <Image Name="OutputImage" Margin="505,50,10,90"/>
+
+        <Button Name="RunCpp" Content="Run Cpp" HorizontalAlignment="Left" Margin="10,0,0,50" Width="90" Click="Button_RunCpp" Height="30" VerticalAlignment="Bottom"/>
+        <Button Name="RunAsm" Content="Run Asm" HorizontalAlignment="Left" Margin="110,0,0,50" Width="90" Click="Button_RunAsm" Height="30" VerticalAlignment="Bottom"/>
+        <Button Name="Save" Content="Save" HorizontalAlignment="Left" Margin="210,0,0,50" Width="90" Click="Button_Save" Height="30" VerticalAlignment="Bottom"/>
+        <Label Content="Time:" HorizontalAlignment="Left" Margin="10,0,0,10" Width="40" Height="30" VerticalAlignment="Bottom"/>
+        <Label Name="TimeLabel" Content="" HorizontalAlignment="Left" Margin="60,0,0,10" Width="340" Height="30" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
